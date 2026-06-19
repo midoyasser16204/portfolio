@@ -1,5 +1,5 @@
 [build]
-  command = "dart pub get && dart run jaspr build"
+  command = "bash build.sh"
   publish = "build/jaspr"
 
 [[redirects]]
