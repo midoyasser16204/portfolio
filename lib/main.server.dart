@@ -11,6 +11,7 @@ void main() {
 
   runApp(
     Document(
+      base: 'portfolio',
       title: 'Mohamed Yasser Arafat — Mobile Developer',
       head: [
         meta(name: 'viewport', content: 'width=device-width, initial-scale=1.0'),
