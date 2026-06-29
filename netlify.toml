@@ -1,8 +1,0 @@
-[build]
-  command = "bash build.sh"
-  publish = "build/jaspr"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
