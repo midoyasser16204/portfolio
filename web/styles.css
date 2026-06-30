@@ -571,13 +571,13 @@ h2 {
 
 .timeline {
   position: relative;
-  padding-left: 28px;
+  padding-left: 80px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 40px;
   top: 8px;
   bottom: 0;
   width: 1px;
@@ -586,12 +586,12 @@ h2 {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -34px;
+  left: -46px;
   top: 6px;
   width: 12px;
   height: 12px;
@@ -698,14 +698,14 @@ h2 {
 
 .timeline-logo-wrapper {
   position: absolute;
-  left: -50px;
-  top: -10px;
-  width: 44px;
-  height: 44px;
+  left: -80px;
+  top: -16px;
+  width: 80px;
+  height: 80px;
   background: var(--white);
   border-radius: 50%;
-  border: 2px solid var(--bg);
-  box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+  border: 4px solid var(--bg);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,34 +772,34 @@ h2 {
 }
 
 .project-logo-wrapper {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover .project-logo-wrapper {
   transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 12px 24px rgba(6, 182, 212, 0.25);
 }
 
 .project-logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 6px;
+  padding: 8px;
 }
 
 .project-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 6px;
