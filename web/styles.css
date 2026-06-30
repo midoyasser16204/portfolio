@@ -165,10 +165,6 @@ nav {
   color: transparent;
 }
 
-.nav-logo span {
-  color: var(--white);
-}
-
 .nav-links {
   display: flex;
   gap: 32px;

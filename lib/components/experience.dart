@@ -9,18 +9,29 @@ class ExperienceSection extends StatelessComponent {
     return section(id: 'experience', [
       div(classes: 'reveal', [
         div(classes: 'section-tag', [.text('Experience')]),
-        h2([.text("What I've "), span(classes: 'text-cyan', [.text('Built')])]),
+        h2([
+          .text("What I've "),
+          span(classes: 'text-cyan', [.text('Built')]),
+        ]),
         p(classes: 'section-sub', [
           .text('Production apps, internship projects, and freelance work across Android and Flutter.'),
         ]),
       ]),
       div(classes: 'timeline', [
-
         // ── ConstructEYE ─────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-logo-wrapper', attributes: const {'style': 'background-color: #13181e;'}, [
-            img(src: 'images/constructEYE_logo.png', classes: 'timeline-logo', alt: 'ConstructEYE Logo', attributes: const {'style': 'background-color: transparent;'}),
-          ]),
+          div(
+            classes: 'timeline-logo-wrapper',
+            attributes: const {'style': 'background-color: #13181e;'},
+            [
+              img(
+                src: 'images/constructEYE_logo.png',
+                classes: 'timeline-logo',
+                alt: 'ConstructEYE Logo',
+                attributes: const {'style': 'background-color: transparent;'},
+              ),
+            ],
+          ),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Oct 2025 – Jun 2026')]),
             span(classes: 'timeline-type', [.text('Graduation Project')]),
@@ -50,7 +61,9 @@ class ExperienceSection extends StatelessComponent {
             li([
               .text('Structured the codebase using '),
               strong([.text('Clean Architecture')]),
-              .text(' with layer-based module organization, enabling parallel development and reducing integration conflicts.'),
+              .text(
+                ' with layer-based module organization, enabling parallel development and reducing integration conflicts.',
+              ),
             ]),
             li([
               .text('Integrated '),
@@ -63,16 +76,27 @@ class ExperienceSection extends StatelessComponent {
               .text(', preserving theme and localization preferences across sessions.'),
             ]),
             li([
-              .text('Bridged mobile frontend with backend and AI teams to translate detection pipeline outputs into structured supervisor alerts.'),
+              .text(
+                'Bridged mobile frontend with backend and AI teams to translate detection pipeline outputs into structured supervisor alerts.',
+              ),
             ]),
           ]),
         ]),
 
         // ── Planet ───────────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-logo-wrapper', attributes: const {'style': 'background-color: black;'}, [
-            img(src: 'images/planet_logo.png', classes: 'timeline-logo', alt: 'Planet Logo', attributes: const {'style': 'background-color: transparent;'}),
-          ]),
+          div(
+            classes: 'timeline-logo-wrapper',
+            attributes: const {'style': 'background-color: black;'},
+            [
+              img(
+                src: 'images/planet_logo.png',
+                classes: 'timeline-logo',
+                alt: 'Planet Logo',
+                attributes: const {'style': 'background-color: transparent;'},
+              ),
+            ],
+          ),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Jan 2025 – Oct 2025')]),
             span(classes: 'timeline-type', [.text('Freelance')]),
@@ -118,14 +142,23 @@ class ExperienceSection extends StatelessComponent {
 
         // ── Job Finder ───────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-logo-wrapper', attributes: const {'style': 'background-color: #5aabbc;'}, [
-            img(src: 'images/job_finder_logo.png', classes: 'timeline-logo', alt: 'Job Finder Logo', attributes: const {'style': 'background-color: transparent;'}),
-          ]),
+          div(
+            classes: 'timeline-logo-wrapper',
+            attributes: const {'style': 'background-color: #5aabbc;'},
+            [
+              img(
+                src: 'images/job_finder_logo.png',
+                classes: 'timeline-logo',
+                alt: 'Job Finder Logo',
+                attributes: const {'style': 'background-color: transparent;'},
+              ),
+            ],
+          ),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Jul 2025 – Aug 2025')]),
             span(classes: 'timeline-type', [.text('Internship · Link Development')]),
           ]),
-          h3(classes: 'timeline-title', [.text('Job Finder')]),
+          h3(classes: 'timeline-title', [.text('Job Search')]),
           p(classes: 'timeline-sub', [.text('Android Developer')]),
           div(classes: 'timeline-links', [
             a(
@@ -163,7 +196,6 @@ class ExperienceSection extends StatelessComponent {
             ]),
           ]),
         ]),
-
       ]),
     ]);
   }
