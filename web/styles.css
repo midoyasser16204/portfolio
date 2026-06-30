@@ -764,7 +764,7 @@ h2 {
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
-  cursor: default;
+  cursor: none;
 }
 
 .project-card::before {
