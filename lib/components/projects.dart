@@ -16,8 +16,8 @@ class ProjectsSection extends StatelessComponent {
 
         // ── Workability ──────────────────────────────────────────
         div(classes: 'project-card reveal', [
-          div(classes: 'project-logo-wrapper', [
-            img(src: 'images/workability_logo.png', classes: 'project-logo', alt: 'Workability Logo')
+          div(classes: 'project-logo-wrapper', attributes: const {'style': 'background-color: white;'}, [
+            img(src: 'images/workability_logo.png', classes: 'project-logo', alt: 'Workability Logo', attributes: const {'style': 'background-color: transparent;'}),
           ]),
           div(classes: 'project-name', [.text('Workability')]),
           p(classes: 'project-desc', [
