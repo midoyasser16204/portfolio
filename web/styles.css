@@ -112,10 +112,10 @@ textarea {
 }
 
 .splash-loader {
-  width: 200px;          /* adjust as needed */
+  width: 200px;
   height: 4px;
   background: rgba(6, 182, 212, 0.1);
-  border-radius: 999px;
+  border-radius: 2px; /* slight rounding, not pill-shaped */
   overflow: hidden;
   position: relative;
 }
@@ -130,7 +130,7 @@ textarea {
   background: var(--cyan);
   transform: scaleX(0);
   transform-origin: left;
-  animation: loadFill 3s linear forwards; /* control duration here */
+  animation: loadFill 3s linear forwards;
 }
 
 @keyframes loadFill {
