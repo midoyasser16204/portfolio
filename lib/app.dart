@@ -1,5 +1,4 @@
 import 'package:jaspr/jaspr.dart';
-
 import 'pages/portfolio.dart';
 
 /// Root server component — renders the [Portfolio] @client page.
