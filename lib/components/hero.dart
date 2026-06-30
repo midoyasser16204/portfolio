@@ -9,16 +9,11 @@ class HeroSection extends StatelessComponent {
   const HeroSection({super.key, required this.typedText});
 
   // Helper builders for the phone code display
-  static Component _line(List<Component> parts) =>
-      span(classes: 'code-line', parts);
-  static Component _kw(String t) =>
-      span(classes: 'code-keyword', [.text(t)]);
-  static Component _fn(String t) =>
-      span(classes: 'code-fn', [.text(t)]);
-  static Component _str(String t) =>
-      span(classes: 'code-str', [.text(t)]);
-  static Component _cm(String t) =>
-      span(classes: 'code-comment', [.text(t)]);
+  static Component _line(List<Component> parts) => span(classes: 'code-line', parts);
+  static Component _kw(String t) => span(classes: 'code-keyword', [.text(t)]);
+  static Component _fn(String t) => span(classes: 'code-fn', [.text(t)]);
+  static Component _str(String t) => span(classes: 'code-str', [.text(t)]);
+  static Component _cm(String t) => span(classes: 'code-comment', [.text(t)]);
 
   @override
   Component build(BuildContext context) {
@@ -53,13 +48,13 @@ class HeroSection extends StatelessComponent {
             href: 'https://linkedin.com/in/mohamed-yasser-4164582a5',
             classes: 'btn-primary',
             attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-            [.text('↗ LinkedIn')],
+            [i(classes: 'fa-brands fa-linkedin', []), .text(' LinkedIn')],
           ),
           a(
             href: 'https://github.com/midoyasser16204',
             classes: 'btn-secondary',
             attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-            [.text('⎇ GitHub')],
+            [i(classes: 'fa-brands fa-github', []), .text(' GitHub')],
           ),
         ]),
       ]),
@@ -92,7 +87,10 @@ class HeroSection extends StatelessComponent {
             _line([.text('  }')]),
             _line([.text('}')]),
             _line([.text('\u00a0')]),
-            _line([_cm('// 🏆 Rally Egypt Finalist')]),
+            _line([
+              i(classes: 'fa-solid fa-trophy', []),
+              .text(' Rally Egypt Finalist'),
+            ]),
           ]),
           div(classes: 'phone-glow', []),
         ]),

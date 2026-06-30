@@ -25,6 +25,85 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── CUSTOM CURSOR ── */
+.custom-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(6, 182, 212, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: top 0.1s ease-out, left 0.1s ease-out;
+}
+
+a, button, input, textarea {
+  cursor: none !important;
+}
+
+/* ── SPLASH SCREEN ── */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.splash-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, var(--white) 0%, var(--cyan) 50%, var(--indigo) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulseLogo 1.5s infinite;
+  margin: 0;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.splash-loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(6, 182, 212, 0.1);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spinLoader 1s linear infinite;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
 }
 
 /* ── NAV ── */
@@ -304,6 +383,30 @@ h2 {
 .timeline-bullets li::before { content: '▸'; color: var(--indigo); position: absolute; left: 0; }
 .timeline-bullets li strong { color: var(--white); font-weight: 500; }
 
+.timeline-logo-wrapper {
+  position: absolute; left: -50px; top: -10px;
+  width: 44px; height: 44px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px rgba(79,70,229,0.4);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+.timeline-logo-wrapper:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 20px rgba(6,182,212,0.6);
+}
+.timeline-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+}
+
 /* ── PROJECTS ── */
 #projects { background: var(--bg2); }
 .projects-grid {
@@ -327,12 +430,23 @@ h2 {
 }
 .project-card:hover { transform: translateY(-5px); border-color: rgba(79,70,229,0.35); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
 .project-card:hover::before { opacity: 1; }
-.project-icon {
-  width: 44px; height: 44px;
-  background: linear-gradient(135deg, rgba(79,70,229,0.2), rgba(6,182,212,0.2));
-  border: 1px solid var(--border); border-radius: 12px;
+.project-logo-wrapper {
+  width: 56px; height: 56px;
+  background: var(--white);
+  border: 1px solid var(--border); border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem; margin-bottom: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.project-card:hover .project-logo-wrapper {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(6,182,212,0.2);
+}
+.project-logo {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
 }
 .project-name {
   font-family: 'Space Grotesk', sans-serif;
@@ -436,6 +550,13 @@ footer span { color: var(--indigo); }
 
 /* ── UTILITY ── */
 .text-cyan { color: var(--cyan); }
+
+/* Enhancing existing animations */
+.btn-primary i, .btn-secondary i { transition: transform 0.3s ease; }
+.btn-primary:hover i, .btn-secondary:hover i { transform: scale(1.2); }
+
+.chip-link i, .proj-link i { transition: transform 0.3s ease; }
+.chip-link:hover i, .proj-link:hover i { transform: scale(1.2); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {

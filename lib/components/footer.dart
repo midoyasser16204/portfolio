@@ -8,7 +8,7 @@ class FooterSection extends StatelessComponent {
   Component build(BuildContext context) {
     return footer([
       .text('Built with '),
-      span([.text('♥')]),
+      span([i(classes: 'fa-solid fa-heart text-cyan', [])]),
       .text(' by Mohamed Yasser Arafat · Cairo, Egypt · '),
       span([.text('2026')]),
     ]);

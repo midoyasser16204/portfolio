@@ -7,4 +7,6 @@ double getElementOffsetTop(String id) => double.maxFinite;
 
 void addScrollListener(void Function() callback) {}
 
+void addMouseMoveListener(void Function(double x, double y) callback) {}
+
 bool get isClient => false;

@@ -10,7 +10,10 @@ import '../components/nav.dart';
 import '../components/projects.dart';
 import '../components/skills.dart';
 import '../cubits/typed_role_cubit.dart';
+import '../cubits/navigation_cubit.dart';
 import '../utils/web_utils.dart';
+import '../components/custom_cursor.dart';
+import '../components/splash_screen.dart';
 
 /// Root client component. Annotated with @client so Jaspr compiles it to
 /// JavaScript and hydrates it in the browser after SSR pre-rendering.
@@ -28,17 +31,10 @@ class Portfolio extends StatefulComponent {
 
 class _PortfolioState extends State<Portfolio> {
   late final TypedRoleCubit _typedCubit;
+  late final NavigationCubit _navCubit;
 
   String _typedText = '';
   String _activeSection = '';
-
-  static const _sectionIds = [
-    'contact',
-    'education',
-    'projects',
-    'experience',
-    'skills',
-  ];
 
   @override
   void initState() {
@@ -47,39 +43,32 @@ class _PortfolioState extends State<Portfolio> {
     // Typing animation (pure Dart — safe on server too, but Timers only fire
     // on the client; on the server the cubit simply emits the initial '').
     _typedCubit = TypedRoleCubit();
+    _navCubit = NavigationCubit();
     
     if (isClient) {
       _typedCubit.start();
       _typedCubit.stream.listen((text) {
-        setState(() => _typedText = text);
+        if (mounted) setState(() => _typedText = text);
       });
 
-      // Scroll-based nav highlighting — only runs in the browser.
-      addScrollListener(_onScroll);
+      _navCubit.stream.listen((section) {
+        if (mounted) setState(() => _activeSection = section);
+      });
     }
-  }
-
-  void _onScroll() {
-    final scrollY = getScrollY();
-    for (final id in _sectionIds) {
-      final top = getElementOffsetTop(id);
-      if (scrollY >= top - 120) {
-        if (_activeSection != id) setState(() => _activeSection = id);
-        return;
-      }
-    }
-    if (_activeSection != 'hero') setState(() => _activeSection = 'hero');
   }
 
   @override
   void dispose() {
     _typedCubit.close();
+    _navCubit.close();
     super.dispose();
   }
 
   @override
   Component build(BuildContext context) {
     return div(id: 'portfolio-root', [
+      const SplashScreen(),
+      const CustomCursor(),
       Nav(activeSection: _activeSection),
       HeroSection(typedText: _typedText),
       const SkillsSection(),

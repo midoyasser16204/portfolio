@@ -18,7 +18,9 @@ class ExperienceSection extends StatelessComponent {
 
         // ── ConstructEYE ─────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-dot cyan', []),
+          div(classes: 'timeline-logo-wrapper', [
+            img(src: 'images/constructEYE_logo.png', classes: 'timeline-logo', alt: 'ConstructEYE Logo'),
+          ]),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Oct 2025 – Jun 2026')]),
             span(classes: 'timeline-type', [.text('Graduation Project')]),
@@ -30,7 +32,7 @@ class ExperienceSection extends StatelessComponent {
               href: 'https://github.com/midoyasser16204/constructeye',
               classes: 'chip-link',
               attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [.text('⎇ GitHub')],
+              [i(classes: 'fa-brands fa-github', []), .text(' GitHub')],
             ),
             a(
               href: 'https://drive.google.com/file/d/1X1koMrcJeC66o_R4tK8cbE6cyH-cbHPr/view?usp=drive_link',
@@ -68,7 +70,9 @@ class ExperienceSection extends StatelessComponent {
 
         // ── Planet ───────────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-dot', []),
+          div(classes: 'timeline-logo-wrapper', [
+            img(src: 'images/planet_logo.png', classes: 'timeline-logo', alt: 'Planet Logo'),
+          ]),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Jan 2025 – Oct 2025')]),
             span(classes: 'timeline-type', [.text('Freelance')]),
@@ -80,7 +84,7 @@ class ExperienceSection extends StatelessComponent {
               href: 'https://github.com/midoyasser16204/planet',
               classes: 'chip-link',
               attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [.text('⎇ GitHub')],
+              [i(classes: 'fa-brands fa-github', []), .text(' GitHub')],
             ),
           ]),
           ul(classes: 'timeline-bullets', [
@@ -114,7 +118,9 @@ class ExperienceSection extends StatelessComponent {
 
         // ── Job Finder ───────────────────────────────────────────
         div(classes: 'timeline-item reveal', [
-          div(classes: 'timeline-dot cyan', []),
+          div(classes: 'timeline-logo-wrapper', [
+            img(src: 'images/job_finder_logo.png', classes: 'timeline-logo', alt: 'Job Finder Logo'),
+          ]),
           div(classes: 'timeline-meta', [
             span(classes: 'timeline-date', [.text('Jul 2025 – Aug 2025')]),
             span(classes: 'timeline-type', [.text('Internship · Link Development')]),
@@ -126,7 +132,7 @@ class ExperienceSection extends StatelessComponent {
               href: 'https://github.com/midoyasser16204/job_finder_app',
               classes: 'chip-link',
               attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [.text('⎇ GitHub')],
+              [i(classes: 'fa-brands fa-github', []), .text(' GitHub')],
             ),
           ]),
           ul(classes: 'timeline-bullets', [

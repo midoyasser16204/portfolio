@@ -19,7 +19,7 @@ class EducationSection extends StatelessComponent {
       div(classes: 'edu-grid', [
 
         div(classes: 'edu-card reveal', [
-          span(classes: 'edu-icon', [.text('🎓')]),
+          span(classes: 'edu-icon', [i(classes: 'fa-solid fa-graduation-cap', [])]),
           div(classes: 'edu-title', [.text('B.Sc. Computer Science')]),
           div(classes: 'edu-org', [.text('October 6 University · Giza, Egypt')]),
           div(classes: 'edu-date', [.text('Sep 2022 – Jun 2026')]),
@@ -29,7 +29,7 @@ class EducationSection extends StatelessComponent {
         ]),
 
         div(classes: 'edu-card reveal', [
-          span(classes: 'edu-icon', [.text('📱')]),
+          span(classes: 'edu-icon', [i(classes: 'fa-solid fa-mobile-screen', [])]),
           div(classes: 'edu-title', [.text('Digital Egypt Pioneers Initiative (DEPI)')]),
           div(classes: 'edu-org', [.text('Mobile App Development · Ministry of Communications')]),
           div(classes: 'edu-date', [.text('2024')]),
@@ -39,7 +39,7 @@ class EducationSection extends StatelessComponent {
         ]),
 
         div(classes: 'edu-card reveal', [
-          span(classes: 'edu-icon', [.text('🏢')]),
+          span(classes: 'edu-icon', [i(classes: 'fa-solid fa-building', [])]),
           div(classes: 'edu-title', [.text('Android Development Internship')]),
           div(classes: 'edu-org', [.text('Link Development · Cairo, Egypt')]),
           div(classes: 'edu-date', [.text('Jul 2025 – Aug 2025')]),
@@ -52,7 +52,7 @@ class EducationSection extends StatelessComponent {
 
       // ── Award banner ─────────────────────────────────────────
       div(classes: 'award-banner reveal', [
-        div(classes: 'award-trophy', [.text('🏆')]),
+        div(classes: 'award-trophy', [i(classes: 'fa-solid fa-trophy', [])]),
         div(classes: 'award-text', [
           h3([.text('Finalist — Rally Egypt Entrepreneurship Competition · 2026')]),
           p([

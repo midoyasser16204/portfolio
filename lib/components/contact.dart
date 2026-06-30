@@ -21,7 +21,7 @@ class ContactSection extends StatelessComponent {
             href: 'mailto:yassermido13@gmail.com',
             classes: 'contact-row',
             [
-              span(classes: 'contact-row-icon', [.text('✉️')]),
+              span(classes: 'contact-row-icon', [i(classes: 'fa-solid fa-envelope', [])]),
               div([
                 span(classes: 'contact-row-label', [.text('Email')]),
                 span(classes: 'contact-row-val', [.text('yassermido13@gmail.com')]),
@@ -33,7 +33,7 @@ class ContactSection extends StatelessComponent {
             href: 'tel:+201151332822',
             classes: 'contact-row',
             [
-              span(classes: 'contact-row-icon', [.text('📞')]),
+              span(classes: 'contact-row-icon', [i(classes: 'fa-solid fa-phone', [])]),
               div([
                 span(classes: 'contact-row-label', [.text('Phone')]),
                 span(classes: 'contact-row-val', [.text('+20 115 133 2822')]),
@@ -46,7 +46,7 @@ class ContactSection extends StatelessComponent {
             classes: 'contact-row',
             attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
             [
-              span(classes: 'contact-row-icon', [.text('💼')]),
+              span(classes: 'contact-row-icon', [i(classes: 'fa-brands fa-linkedin', [])]),
               div([
                 span(classes: 'contact-row-label', [.text('LinkedIn')]),
                 span(classes: 'contact-row-val', [.text('Mohamed Yasser')]),
@@ -59,7 +59,7 @@ class ContactSection extends StatelessComponent {
             classes: 'contact-row',
             attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
             [
-              span(classes: 'contact-row-icon', [.text('🐙')]),
+              span(classes: 'contact-row-icon', [i(classes: 'fa-brands fa-github', [])]),
               div([
                 span(classes: 'contact-row-label', [.text('GitHub')]),
                 span(classes: 'contact-row-val', [.text('midoyasser16204')]),

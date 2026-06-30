@@ -6,6 +6,10 @@
 
 import 'package:jaspr/client.dart';
 
+import 'package:portfolio/components/custom_cursor.dart'
+    deferred as _custom_cursor;
+import 'package:portfolio/components/splash_screen.dart'
+    deferred as _splash_screen;
 import 'package:portfolio/pages/portfolio.dart' deferred as _portfolio;
 
 /// Default [ClientOptions] for use with your Jaspr project.
@@ -26,6 +30,14 @@ import 'package:portfolio/pages/portfolio.dart' deferred as _portfolio;
 /// ```
 ClientOptions get defaultClientOptions => ClientOptions(
   clients: {
+    'custom_cursor': ClientLoader(
+      (p) => _custom_cursor.CustomCursor(),
+      loader: _custom_cursor.loadLibrary,
+    ),
+    'splash_screen': ClientLoader(
+      (p) => _splash_screen.SplashScreen(),
+      loader: _splash_screen.loadLibrary,
+    ),
     'portfolio': ClientLoader(
       (p) => _portfolio.Portfolio(),
       loader: _portfolio.loadLibrary,

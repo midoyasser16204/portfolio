@@ -18,4 +18,11 @@ void addScrollListener(void Function() callback) {
   );
 }
 
+void addMouseMoveListener(void Function(double x, double y) callback) {
+  web.window.addEventListener(
+    'mousemove',
+    ((web.MouseEvent e) => callback(e.clientX.toDouble(), e.clientY.toDouble())).toJS,
+  );
+}
+
 bool get isClient => true;

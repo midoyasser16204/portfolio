@@ -16,7 +16,9 @@ class ProjectsSection extends StatelessComponent {
 
         // ── Workability ──────────────────────────────────────────
         div(classes: 'project-card reveal', [
-          div(classes: 'project-icon', [.text('♿')]),
+          div(classes: 'project-logo-wrapper', [
+            img(src: 'images/workability_logo.png', classes: 'project-logo', alt: 'Workability Logo')
+          ]),
           div(classes: 'project-name', [.text('Workability')]),
           p(classes: 'project-desc', [
             .text(
@@ -34,7 +36,7 @@ class ProjectsSection extends StatelessComponent {
               href: 'https://github.com/midoyasser16204/Workability-App',
               classes: 'proj-link',
               attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
-              [.text('⎇ View on GitHub')],
+              [i(classes: 'fa-brands fa-github', []), .text(' View on GitHub')],
             ),
           ]),
         ]),

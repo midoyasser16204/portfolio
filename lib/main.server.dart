@@ -15,12 +15,16 @@ void main() {
       title: 'Mohamed Yasser Arafat — Mobile Developer',
       head: [
         meta(name: 'viewport', content: 'width=device-width, initial-scale=1.0'),
-        meta(name: 'description', content:
-          'Mohamed Yasser Arafat — Mobile Developer specialising in Android '
-          '(Kotlin / Jetpack Compose) and Flutter with Clean Architecture, '
-          'Firebase, and AI integrations. Based in Cairo, Egypt.'),
+        meta(
+          name: 'description',
+          content:
+              'Mohamed Yasser Arafat — Mobile Developer specialising in Android '
+              '(Kotlin / Jetpack Compose) and Flutter with Clean Architecture, '
+              'Firebase, and AI integrations. Based in Cairo, Egypt.',
+        ),
         link(rel: 'icon', href: 'favicon.ico'),
         link(rel: 'stylesheet', href: 'styles.css'),
+        link(rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'),
         link(
           rel: 'preconnect',
           href: 'https://fonts.googleapis.com',
