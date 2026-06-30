@@ -26,3 +26,7 @@ void addMouseMoveListener(void Function(double x, double y) callback) {
 }
 
 bool get isClient => true;
+
+void scrollToTop() {
+  web.window.scrollTo(web.ScrollToOptions(top: 0, behavior: 'smooth'));
+}

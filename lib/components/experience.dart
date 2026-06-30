@@ -162,7 +162,7 @@ class ExperienceSection extends StatelessComponent {
           p(classes: 'timeline-sub', [.text('Android Developer')]),
           div(classes: 'timeline-links', [
             a(
-              href: 'https://github.com/midoyasser16204/job_finder_app',
+              href: 'https://github.com/midoyasser16204/job_search_app',
               classes: 'chip-link',
               attributes: const {'target': '_blank', 'rel': 'noopener noreferrer'},
               [i(classes: 'fa-brands fa-github', []), .text(' GitHub')],

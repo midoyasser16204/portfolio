@@ -90,6 +90,12 @@ class _PortfolioState extends State<Portfolio> {
         const EducationSection(),
         const ContactSection(),
         const FooterSection(),
+        if (_activeSection != 'hero' && _activeSection != '')
+          button(
+            classes: 'scroll-to-top',
+            events: {'click': (e) => scrollToTop()},
+            [i(classes: 'fa-solid fa-arrow-up', [])]
+          ),
       ]
     ]);
   }

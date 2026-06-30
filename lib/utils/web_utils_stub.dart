@@ -10,3 +10,5 @@ void addScrollListener(void Function() callback) {}
 void addMouseMoveListener(void Function(double x, double y) callback) {}
 
 bool get isClient => false;
+
+void scrollToTop() {}
