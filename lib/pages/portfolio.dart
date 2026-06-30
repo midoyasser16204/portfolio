@@ -52,8 +52,8 @@ class _PortfolioState extends State<Portfolio> {
     if (isClient) {
       _splashCubit.stream.listen((state) {
         if (mounted) {
-          setState(() => _isSplashVisible = state.show);
-          if (!state.show) {
+          setState(() => _isSplashVisible = state.opacity > 0.0);
+          if (state.opacity == 0.0) {
             _typedCubit.start();
           }
         }

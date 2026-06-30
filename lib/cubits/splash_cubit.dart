@@ -14,7 +14,7 @@ class SplashCubit extends Cubit<SplashState> {
   
   SplashCubit._internal() : super(const SplashState(true, 1.0)) {
     if (isClient) {
-      Timer(const Duration(milliseconds: 1500), () {
+      Timer(const Duration(milliseconds: 3000), () {
         emit(const SplashState(true, 0.0));
         Timer(const Duration(milliseconds: 500), () {
           emit(const SplashState(false, 0.0));
