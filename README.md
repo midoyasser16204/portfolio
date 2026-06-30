@@ -36,18 +36,6 @@ This project demonstrates how to build SEO-friendly web applications using **SSR
 * 🚀 Fast loading performance
 ---
  
-# 🖼️ Preview
- 
-> Add screenshots or GIFs here.
- 
-```md
-![Home](screenshots/home.png)
- 
-![Projects](screenshots/projects.png)
-```
- 
----
- 
 # 🏗 Architecture
  
 ```text
