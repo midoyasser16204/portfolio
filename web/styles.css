@@ -146,12 +146,13 @@ nav {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--white);
+  background: linear-gradient(135deg, var(--white) 0%, var(--cyan) 50%, var(--indigo) 100%);
   letter-spacing: -0.02em;
+  color: transparent;
 }
 
 .nav-logo span {
-  color: var(--cyan);
+  color: var(--white);
 }
 
 .nav-links {
