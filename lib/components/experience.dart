@@ -19,7 +19,7 @@ class ExperienceSection extends StatelessComponent {
       ]),
       div(classes: 'timeline', [
         // ── ConstructEYE ─────────────────────────────────────────
-        div(classes: 'timeline-item reveal', [
+        div(classes: 'timeline-item reveal', attributes: const {'style': 'padding-left: 16px;'}, [
           div(
             classes: 'timeline-logo-wrapper',
             attributes: const {'style': 'background-color: #13181e;'},
@@ -84,7 +84,7 @@ class ExperienceSection extends StatelessComponent {
         ]),
 
         // ── Planet ───────────────────────────────────────────────
-        div(classes: 'timeline-item reveal', [
+        div(classes: 'timeline-item reveal', attributes: const {'style': 'padding-left: 16px;'}, [
           div(
             classes: 'timeline-logo-wrapper',
             attributes: const {'style': 'background-color: black;'},
@@ -141,7 +141,7 @@ class ExperienceSection extends StatelessComponent {
         ]),
 
         // ── Job Finder ───────────────────────────────────────────
-        div(classes: 'timeline-item reveal', [
+        div(classes: 'timeline-item reveal', attributes: const {'style': 'padding-left: 16px;'}, [
           div(
             classes: 'timeline-logo-wrapper',
             attributes: const {'style': 'background-color: #5aabbc;'},

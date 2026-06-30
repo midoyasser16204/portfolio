@@ -22,7 +22,7 @@ class EducationSection extends StatelessComponent {
           span(classes: 'edu-icon', [i(classes: 'fa-solid fa-graduation-cap', [])]),
           div(classes: 'edu-title', [.text('B.Sc. Computer Science')]),
           div(classes: 'edu-org', [.text('October 6 University · Giza, Egypt')]),
-          div(classes: 'edu-date', [.text('Sep 2022 – Jun 2026')]),
+          div(classes: 'edu-date', [.text('Sep 2022 – Jun 2026 · GPA 3.77/4')]),
           p(classes: 'edu-detail', [
             .text('Data Structures, Algorithms, OOP, Mobile Development, Software Engineering'),
           ]),
