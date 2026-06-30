@@ -88,7 +88,7 @@ textarea {
 
 .splash-logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 700;
   letter-spacing: -0.05em;
   background: linear-gradient(135deg, var(--white) 0%, var(--cyan) 50%, var(--indigo) 100%);
@@ -112,10 +112,10 @@ textarea {
 }
 
 .splash-loader {
-  width: 200px;
-  height: 4px;
+  width: 400px;
+  height: 8px;
   background: rgba(6, 182, 212, 0.1);
-  border-radius: 2px; /* slight rounding, not pill-shaped */
+  border-radius: 4px; /* slight rounding, not pill-shaped */
   overflow: hidden;
   position: relative;
 }

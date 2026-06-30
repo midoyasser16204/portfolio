@@ -9,7 +9,10 @@ class SplashState {
 }
 
 class SplashCubit extends Cubit<SplashState> {
-  SplashCubit() : super(const SplashState(true, 1.0)) {
+  static final SplashCubit _instance = SplashCubit._internal();
+  factory SplashCubit() => _instance;
+  
+  SplashCubit._internal() : super(const SplashState(true, 1.0)) {
     if (isClient) {
       Timer(const Duration(milliseconds: 1500), () {
         emit(const SplashState(true, 0.0));

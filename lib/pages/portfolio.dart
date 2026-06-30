@@ -14,6 +14,7 @@ import '../cubits/navigation_cubit.dart';
 import '../utils/web_utils.dart';
 import '../components/custom_cursor.dart';
 import '../components/splash_screen.dart';
+import '../cubits/splash_cubit.dart';
 
 /// Root client component. Annotated with @client so Jaspr compiles it to
 /// JavaScript and hydrates it in the browser after SSR pre-rendering.
@@ -32,9 +33,11 @@ class Portfolio extends StatefulComponent {
 class _PortfolioState extends State<Portfolio> {
   late final TypedRoleCubit _typedCubit;
   late final NavigationCubit _navCubit;
+  late final SplashCubit _splashCubit;
 
   String _typedText = '';
   String _activeSection = '';
+  bool _isSplashVisible = true;
 
   @override
   void initState() {
@@ -44,9 +47,18 @@ class _PortfolioState extends State<Portfolio> {
     // on the client; on the server the cubit simply emits the initial '').
     _typedCubit = TypedRoleCubit();
     _navCubit = NavigationCubit();
+    _splashCubit = SplashCubit();
     
     if (isClient) {
-      _typedCubit.start();
+      _splashCubit.stream.listen((state) {
+        if (mounted) {
+          setState(() => _isSplashVisible = state.show);
+          if (!state.show) {
+            _typedCubit.start();
+          }
+        }
+      });
+
       _typedCubit.stream.listen((text) {
         if (mounted) setState(() => _typedText = text);
       });
@@ -69,14 +81,16 @@ class _PortfolioState extends State<Portfolio> {
     return div(id: 'portfolio-root', [
       const SplashScreen(),
       const CustomCursor(),
-      Nav(activeSection: _activeSection),
-      HeroSection(typedText: _typedText),
-      const SkillsSection(),
-      const ExperienceSection(),
-      const ProjectsSection(),
-      const EducationSection(),
-      const ContactSection(),
-      const FooterSection(),
+      if (!_isSplashVisible) ...[
+        Nav(activeSection: _activeSection),
+        HeroSection(typedText: _typedText),
+        const SkillsSection(),
+        const ExperienceSection(),
+        const ProjectsSection(),
+        const EducationSection(),
+        const ContactSection(),
+        const FooterSection(),
+      ]
     ]);
   }
 }
