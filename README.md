@@ -18,7 +18,7 @@ This project demonstrates how to build SEO-friendly web applications using **SSR
  
 ---
  
-## ✨ Features
+# ✨ Features
  
 * ⚡ Server-Side Rendering (SSR)
 * 🚀 Client-side Hydration
